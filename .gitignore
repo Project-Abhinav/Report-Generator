@@ -1,0 +1,44 @@
+# -----------------
+# Virtual Environment
+# -----------------
+# Ignore the virtual environment folder entirely.
+.venv/
+
+
+# -----------------
+# Generated Files
+# -----------------
+# Ignore generated reports. Only the code to create them should be tracked.
+reports/
+
+
+# -----------------
+# Python Cache
+# -----------------
+# Ignore Python's compiled bytecode files and cache folders.
+__pycache__/
+*.pyc
+
+
+# -----------------
+# IDE & Editor Config
+# -----------------
+# Ignore settings files from popular editors like VS Code and PyCharm.
+.vscode/
+.idea/
+
+
+# -----------------
+# Environment Variables
+# -----------------
+# Ignore files containing secrets and environment-specific variables.
+.env
+*.env
+
+
+# -----------------
+# Optional
+# -----------------
+# Uncomment the line below if your 'data' folder contains large or
+# sensitive files that you don't want to track in Git.
+# data/
