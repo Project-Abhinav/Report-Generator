@@ -1,5 +1,9 @@
 import pandas as pd
-from analysis import Calculate_Sales_kpi,print_Sales_kpis,Calculate_HR_kpis,calculate_finance_kpis,print_finance_kpis,print_hr_kpis
+from analysis import Calculate_Sales_kpi,print_Sales_kpis,Calculate_HR_kpis,calculate_finance_kpis,print_finance_kpis,print_hr_kpis,visualize_sales,visualize_hr,visualize_finance
+from utils import create_summary, get_chart_paths
+from report_generator import generate_pdf
+
+
 
 file_type = "Sales"
 
@@ -115,14 +119,24 @@ def main(file_path):
     
         kpis = Calculate_Sales_kpi(df)
         print_Sales_kpis(kpis)
+        visualize_sales(df)
+
 
     elif file_type == "HR":
         kpis = Calculate_HR_kpis(df)
         print_hr_kpis(kpis)
+        visualize_hr(df)
 
     else : 
         kpis = calculate_finance_kpis(df)
         print_finance_kpis(kpis)
+        visualize_finance(df)
+
+    summary_text = create_summary(kpis, file_type)
+    chart_paths = get_chart_paths(file_type)
+    output_file = output_file = "output/weekly_report.pdf"
+
+    generate_pdf(kpis, summary_text, chart_paths, output_file)
 
 if __name__ == "__main__":
     
