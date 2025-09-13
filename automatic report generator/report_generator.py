@@ -40,11 +40,11 @@ def generate_pdf(kpis, summary_text, chart_paths, output_file):
 
     elements.append(Spacer(1, 20))
 
-    # Add charts — try to fit them nicely on the page
+    # charts
     for chart_path in chart_paths:
         try:
             img = Image(chart_path)
-            img.drawHeight = 3.5 * inch  # Adjust to fit on one page
+            img.drawHeight = 3.5 * inch  
             img.drawWidth = 5.5 * inch
             elements.append(img)
             elements.append(Spacer(1, 12))
