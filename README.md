@@ -35,12 +35,8 @@ It supports **Sales**, **HR**, and **Finance** datasets and can automatically ge
 ```
 
 ├── src/
-│   ├── chart/                       # Stores generated charts
 │   ├── data/                        # Uploaded input datasets
-│   ├── output/                      # Generated PDF reports
-│   ├── reports/                     # (Optional) For scheduled/email reports
-│   ├── temp/                        # Temporary uploaded files
-│   ├── __pycache__/                 
+│   ├── temp/                        # Temporary uploaded files               
 │   │
 │   ├── analysis.py                  # KPIs & visualizations
 │   ├── app.py                       # Data loading, preprocessing, KPI logic
