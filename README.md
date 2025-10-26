@@ -32,28 +32,30 @@ It supports **Sales**, **HR**, and **Finance** datasets and can automatically ge
 
 ## 🗂️ Project Structure
 
-Automated_Report_Generator/
-│
-├── automatic report generator/
+```
+
+├── src/
 │   ├── chart/                       # Stores generated charts
 │   ├── data/                        # Uploaded input datasets
 │   ├── output/                      # Generated PDF reports
 │   ├── reports/                     # (Optional) For scheduled/email reports
 │   ├── temp/                        # Temporary uploaded files
 │   ├── __pycache__/                 
-|
-├── analysis.py                      # KPIs & visualizations
-├── app.py                           # Data loading, preprocessing, KPI logic
-├── report_generator.py              # PDF creation logic
-├── streamlit_app.py                 # Streamlit UI
-├── utils.py                         # Helper functions
-│
-├── requirements.txt                 # Dependencies
-└── .gitignore                       # Ignore unnecessary files
-│
+│   │
+│   ├── analysis.py                  # KPIs & visualizations
+│   ├── app.py                       # Data loading, preprocessing, KPI logic
+│   ├── report_generator.py          # PDF creation logic
+│   ├── streamlit_app.py             # Streamlit UI
+│   ├── utils.py                     # Helper functions
+│   │
+│   ├── requirements.txt             # Dependencies
+|── .gitignore                       # Ignore unnecessary files
 └── .venv/                           # Virtual environment
 
----
+```
+
+
+
 
 ## ⚙️ Installation & Setup
 
@@ -108,14 +110,6 @@ The app will automatically:
 * Export a professional PDF report
 
 You can download the report directly from the app.
-
----
-
-## 📅 (Optional) Automate Report Generation
-
-```python
-schedule.every().day.at("08:00").do(generate_scheduled_report)
-```
 ---
 
 ## 📊 Supported Datasets & Columns
